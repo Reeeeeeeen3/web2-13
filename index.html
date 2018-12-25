@@ -9,7 +9,9 @@
   var ncmb = new NCMB("4ebd529f2cc1a2746dcc1431147cd255441a3d12566609b64a8fc7fe8f055493","ccee8f91583afd4f0fd3dc04bd9710ecc6c5e032fe118dbd745061b3094b5f0a");
   
   //クラスのTestClassを作成
-  var testClass = new TestClass();
+  var TestClass = ncmb.DataStore("TestClass");
+  //データストアへの登録
+  var TestClass = new TestClass();
   testClass.set("message", "Hello, NCMB!");
   testClass.save()
     .then(function(){
