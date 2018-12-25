@@ -12,21 +12,20 @@
   var TestClass = ncmb.DataStore("TestClass");
   //データストアへの登録
   var testClass = new TestClass();
-  testClass.set("message", "こんにちは, NCMB!");
+  testClass.set("message", name);
   testClass.save()
     .then(function(){
     //保存に成功した場合の処理
     })
     .catch(function(err){
-    //保存に成功した場合の処理
+    //保存に失敗した場合の処理
     });
   </script>
   <body>
     <form action="#" method="post">
     <p>ニックネーム：<br>
     <input type="text" name="name"></p>
-    <p>好きな数字：<br>
-    <input type="text" name="number"></p>
+    <p><input type="submit" value="確認"></p>
     </form>
   </body>
 </html>
